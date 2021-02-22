@@ -1,12 +1,12 @@
 {% extends 'Book/base.html' %}
 
-{% block title %}Room details{% endblock %}
+{% block title %}Hall details{% endblock %}
 
 {% block content %}
     <br/>
     <table class="table table-bordered table-striped">
         <tr>
-            <td>Conference room</td>
+            <td>Conference Hall</td>
             <td class="lead">{{ room.name|upper }}</td>
         </tr>
         <tr>
@@ -18,11 +18,11 @@
             <td>{{ projector }}</td>
         </tr>
         <tr>
-            <td>The room is busy</td>
+            <td>The Hall is busy</td>
             <td>{% for reservation in reservations %}{{ reservation }}<br/>{% endfor %}</td>
         </tr>
         <tr>
-            <td>Book a room</td>
+            <td>Book a Hall</td>
             <td>
                 <a href="{% url 'book:reservation' room.id %}">
                 <button class="btn btn-success">Book It</button></a>

@@ -4,11 +4,11 @@
 
 {% block content %}
     <br/>
-    <h2>All Conference Rooms</h2>
+    <h2>All Conference Halls</h2>
     <table class="table table-striped table-bordered">
         <tr>
             <thead class="thead lead">
-                <th>ROOM NAME</th>
+                <th>HALL NAME</th>
                 <th>CAPACITY</th>
                 <th>STATUS</th>
                 <th>MODIFY</th>
@@ -31,13 +31,13 @@
         {% endfor %}
     </table>
     <a href="{% url 'book:new-room' %}">
-        <button class="btn btn-success">Create New Conference Room</button>
+        <button class="btn btn-success">Create New Conference Hall</button>
     </a><br/><br/>
     <div class="jumbotron">
         <h3>SEARCH FOR AVAILABLE ROOM</h3>
         <br/>
         <form id="search" method="get" action="{% url 'book:search' %}">
-            <label>ROOM NAME
+            <label>HALL NAME
                 <input type="text" name="room">
             </label><br/>
             <label>MINIMUM CAPACITY

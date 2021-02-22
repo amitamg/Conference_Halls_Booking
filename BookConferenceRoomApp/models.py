@@ -19,4 +19,4 @@ class Reservation(models.Model):
 
     def __str__(self):
         for r in self.room.all():
-            return "Data rezerwacji: {}, sala: {}".format(self.date, r.name)
+            return "Date of booking: {}, hall: {}".format(self.date, r.name)

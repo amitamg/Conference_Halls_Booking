@@ -4,11 +4,11 @@
 
 {% block content %}
     <br/>
-    <h2>Conference room modification: {{ room.name }}</h2>
+    <h2>Conference Hall modification: {{ room.name }}</h2>
     <p class="text-danger">{{ message }}</p>
     <form method="POST" action="#">
     {% csrf_token %}
-        <label>Living room
+        <label>Conference Hall
             <input type="text" name="name" value="{{ room.name }}" class="form-control">
         </label>
         <br/>
